@@ -22,5 +22,7 @@ tput cup $(($randomi2+$goo)) $BEG; printf "$sequence_a"; done
 }
 
 BELEND=12; for i in $(seq 0 $BELEND); do
-recto; sleep 1; done
+recto;
+#sleep 1;
+done
 tput sgr0; tput cup 0 0;
