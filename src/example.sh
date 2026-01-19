@@ -1,5 +1,11 @@
 #!/bin/bash
+
+terminal=/dev/pts/1
+columns=$(tput cols)
+rows=$(tput lines)
+
 af=3; ab=5; tput setaf $af; tput setab $ab; clear;
+
 CHARS=( a b c d e f g h i )
 
 recto () {
@@ -26,3 +32,8 @@ recto;
 #sleep 1;
 done
 tput sgr0; tput cup 0 0;
+
+echo "rows:"$rows
+echo "columns:"$columns
+echo "-----------------------------"
+echo "-----------------------------"
